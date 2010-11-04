@@ -79,7 +79,7 @@ module Guard
     
     def run
       listener.stop
-      options[:clear] ? UI.clear : UI.reset_line
+      options[:clear] ? UI.clear : UI.info("\n")
       begin
         yield
       rescue Interrupt
